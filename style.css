@@ -1,0 +1,165 @@
+:root {
+    --color_one: #7D0A0A;
+    --color_two: #BF3131;
+    --color_three: #EAD196;
+    --color-four: #EEEEEE;
+    background-color: var(--color-four);
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color_three);
+    border-radius: 10px;
+    gap: 20px;
+
+}
+.logo-img{
+    width: 40px;
+    height: 40px;
+}
+.title-txt{
+    color: var(--color_two);
+}
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+}
+
+.property-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.property-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Distributes content */
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+.manual-property-container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Distributes content */
+        width: 80px;
+        min-width: 100px;
+        max-width: 100px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: auto;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    
+}
+.manual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+.property-txt{
+    color: var(--color_two);
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.value {
+    margin-left: auto;
+    font-weight: bold;
+    color: var(--color_two);
+}
+@keyframes moveRight {
+    30% {transform: translateY(5px);}
+    60% { transform: translateY(-5px);}
+    100% { transform: translateY(0px);}
+}
+
+.moving-img {
+    animation: moveRight 2s infinite alternate ease-in-out;
+}
+
+
+
+.toggle-label {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    position: relative;
+    margin-top: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color_two);
+}
+
+input:checked+.slider:before {
+    transform: translateX(30px);
+}
+.toggle-switch input:focus + .slider {
+    outline: none;   /* Removes focus outline */
+    box-shadow: none; /* Removes any extra highlight */
+}
+
+.relay-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    background-color: green;
+    color: white;
+}
+
+.relay-btn:hover {
+    transform: scale(1.05);
+}
+
+.relay-btn.active {
+    background-color: red;
+}

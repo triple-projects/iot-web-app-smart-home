@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 🔴🟢 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="script.js"></script>
+    <title>Smart Home System</title>
+</head>
+
+<body>
+    <div class="title-container">
+        <img class="logo-img" src="logo.png" alt="Logo">
+        <h2 class="title-txt">Smart Home System</h2>
+    </div>
+    <div class="content-container">
+        <div class="property-container">
+            <img class="property-img" src="gas.png" alt="Gas">
+            <h3 class="property-txt">Gas Indicator</h3>
+            <h3 class="value" id="gas-status">🟢</h3>
+        </div>
+        <div class="property-container">
+            <img class="property-img" src="flame.png" alt="Flame">
+            <h3 class="property-txt">Flame Indicator</h3>
+            <h3 class="value" id="flame-status">🟢</h3>
+        </div>
+        <div class="property-container">
+            <img class="property-img" src="rain.png" alt="Rain">
+            <h3 class="property-txt">Rain Indicator</h3>
+            <h3 class="value" id="rain-status">🟢</h3>
+        </div>
+        <div class="property-container">
+            <img class="property-img" src="temp.png" alt="Temperature">
+            <h3 class="property-txt">Temperature </h3>
+            <h3 class="value" id="temp-value">25°C</h3>
+        </div>
+        <div class="property-container">
+            <div class="manual">
+                <h3 class="property-txt">Manual</h3>
+                <div class="property-container" style="box-shadow: none;">
+                    <div class="manual-property-container">
+                        <div class="manual">
+                            <h3 class="property-txt">Door</h3>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggleDoor" >
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="manual-property-container">
+                        <div class="manual">
+                            <h3 class="property-txt">Window</h3>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggleWindow" >
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Relay Control Button -->
+                <button id="relay-toggle" class="relay-btn">Turn Gas ON</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
